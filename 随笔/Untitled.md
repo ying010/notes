@@ -111,3 +111,8 @@ postStr:{"batteryCode":"1145203700030","customerVo":{"age":"22~30岁","choose":"
 ctName":"【A系列】四件套（后靠背+后坐垫+后脚踏+支架）","totalMoney":25700,"unitPrice":25700}],"otherDiscountAmount":0,"payChannel":1,"payMode":1,"phone":"18823292477","productNum":2,"receiveSingleId":16531,"receiveSingleName":"梁炜健","totalMoney":221600},
 
 timestamp:1601351397245]
+
+
+
+- 省 ： 山东
+- 市 ：
