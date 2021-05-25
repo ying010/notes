@@ -1,38 +1,27 @@
-
-
-signature:d83c41d962be1a44a3fd9c8f9eaae386,
-
-待加密字符串:{"customerVo":{"age":"","choose":"","name":"","purpose":"","resource":"掌柜端","sex":""},
-"discountNoList":[],"frameVinCode":"280421901000110","oldDiscountAmount":0,"orderProductVos":[{"classify":"A7","classifyType":0,"code":"10000085238","color":"向阳黄","count":1,"mode":"轻骑版","productAttributeVos":[{"attributeId":274,"attributeName":"购买类型","attributeValue":"A7","pid":128},{"attributeId":136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":276,"attributeName":"车身颜色","attributeValue":"向阳黄","pid":130}],"productId":85238,"productName":"轻骑版 向阳黄 A7","totalMoney":449900,"unitPrice":449900},{"classifyType":1,"code":"10000081933","count":1,"productId":82144,"productName":"【赠品】前车筐","totalMoney":1,"unitPrice":1}],"otherDiscountAmount":0,"payChannel":3,"payMode":0,"phone":"18823344717","productNum":2,"receiveSingleId":5499,"receiveSingleName":"敏赫","totalMoney":449901}1599531947983,
-
-秘钥:5gaz7stm4s8u58b4k7zmaypzcmqfi65n,
-
-加密后信息:AFF4EA2115CCBA6E7CF2F344D1BF8289,
-
-qureyStr:,
-
-postStr:{"customerVo":{"age":"","choose":"","name":"","purpose":"","resource":"掌柜端","sex":""},"discountNoList":[],"frameVinCode":"28
-0421901000110","oldDiscountAmount":0,"orderProductVos":[{"classify":"A7","classifyType":0,"code":"10000085238","color":"向阳黄","count":1,"mode":"轻骑版","productAttributeVos":[{"attributeId":274,"attributeName":"购买类型","attributeValue":"A7","pid":128},{"attributeId"
-:136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":276,"attributeName":"车身颜色","attributeValue":"向阳黄","pid":130}],"productId":85238,"productName":"轻骑版 向阳黄 A7","totalMoney":449900,"unitPrice":449900},{"classifyType":1,"code":"
-10000081933","count":1,"productId":82144,"productName":"【赠品】前车筐","totalMoney":1,"unitPrice":1}],"otherDiscountAmount":0,"payChannel":3,"payMode":0,"phone":"18823344717","productNum":2,"receiveSingleId":5499,"receiveSingleName":"敏赫","totalMoney":449901},
-
-timestamp:1599531947983
+| 父级节点 | 子级节点 | 深度 | 级别 | 是否子账户 |
+| -------- | -------- | ---- | ---- | ---------- |
+|          |          |      |      |            |
 
 
 
+ALTER TABLE `mambike_dealer`.`t_bind_user_car` 
+ADD COLUMN `qualification` varchar(100) NULL COMMENT '合格证编码' AFTER `name`;
 
+ALTER TABLE `mambike_mammoth`.`t_bind_vehicle` 
+ADD `use_start_time` varchar(30) NULL COMMENT '租期开始时间' AFTER `qualification`;
 
-
-
-
-
-
-
-leads新增客户时跟进人收到消息推送
-
-替换跟进人收到消息推送
-
-点击发送给消息推送
+| 自提补录订单添加签约校验            |
+| ----------------------------------- |
+| 根据手机号查询C端签约信息           |
+| 定时器校验签约,失败的7天轮询        |
+| 签约导致补贴失败的钉钉推送          |
+| 录入订单是C端解绑电池监控           |
+| 换电站耗电查询统计                  |
+| 绑定/解绑换电柜时统计时间段内耗电量 |
+| 自助换电记录C端同步掌柜             |
+| 换电记录查询                        |
+| 实用工具车辆信息查询                |
+| leads列表查询添加来源项筛选         |
 
 
 
@@ -40,79 +29,248 @@ leads新增客户时跟进人收到消息推送
 
 
 
-[
+总行驶里程
 
-signature:f66398d1b3453803b7e57d5c2fe42007,
+租赁时间
 
-待加密字符串:{"batteryCode":"1165195000061","customerVo":{"age":"","choose":"","name":"","purpose":"",
-"resource":"到店选购","sex":""},"discountNoList":[],"frameVinCode":"280421903000040","oldDiscountAmount":0,"orderProductVos":[{"classify":"A5租电","classifyType":0,"code":"10000085238","color":"向阳黄","count":1,"mode":"轻骑版","productAttributeVos":[{"attributeId":386,
-"attributeName":"购买类型","attributeValue":"A5租电","pid":128},{"attributeId":136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":276,"attributeName":"车身颜色","attributeValue":"向阳黄","pid":130}],"productId":85238,"productName":"轻骑版
- 向阳黄 A5租电","totalMoney":199900,"unitPrice":199900},{"classify":"","classifyType":1,"code":"10000085444","color":"","count":1,"mode":"","productId":85652,"productName":"电池押金","totalMoney":30,"unitPrice":30},{"classify":"","classifyType":1,"code":"10000085444","c
-olor":"","count":1,"mode":"","productId":85652,"productName":"电池押金","totalMoney":30,"unitPrice":30}],"otherDiscountAmount":0,"payChannel":1,"payMode":0,"phone":"18700111100","productNum":2,"receiveSingleId":383,"receiveSingleName":"测试-甘","totalMoney":199960}
+租期截至时间
 
-1601019633231,
+合格证
 
-秘钥:5gaz7stm4s8u58b4k7zmaypzcmqfi65n,
+详细地址
 
-加密后信息:7C3698AD47DF7B2748F6C6B7DF4FBAF3,
-
-qureyStr:,
-
-postStr:{"batteryCode":"1165195000061","customerVo":{"age":"","choose":"","name":"","purpose":"","resource":"到店选购","sex":""},"discountNoList":[],"frameVinCode":"2804
-21903000040","oldDiscountAmount":0,"orderProductVos":[{"classify":"A5租电","classifyType":0,"code":"10000085238","color":"向阳黄","count":1,"mode":"轻骑版","productAttributeVos":[{"attributeId":386,"attributeName":"购买类型","attributeValue":"A5租电","pid":128},{"attrib
-uteId":136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":276,"attributeName":"车身颜色","attributeValue":"向阳黄","pid":130}],"productId":85238,"productName":"轻骑版 向阳黄 A5租电","totalMoney":199900,"unitPrice":199900},{"classify":"","
-classifyType":1,"code":"10000085444","color":"","count":1,"mode":"","productId":85652,"productName":"电池押金","totalMoney":30,"unitPrice":30},{"classify":"","classifyType":1,"code":"10000085444","color":"","count":1,"mode":"","productId":85652,"productName":"电池押金",
-"totalMoney":30,"unitPrice":30}],"otherDiscountAmount":0,"payChannel":1,"payMode":0,"phone":"18700111100","productNum":2,"receiveSingleId":383,"receiveSingleName":"测试-甘","totalMoney":199960},
-
-timestamp:1601019633231]
+告警需要合格证
 
 
 
-傅程			12
-
-王辉 			12
-
-张艳艳		12
-
-董佃斌			10
-
-贾诩			10
-
-郭志强			10
-
-李宁				10
-
-孙研森			9
-
-翟伟钰			8
-
-王志英		7
 
 
+- [ ] 获取租期截至时间
 
-[signature:e00091b35c36d02415d97a88791cd739,
+- [ ] 退租
 
-待加密字符串:{"batteryCode":"1145203700030","customerVo":{"age":"22~30岁","choose":"其他","name":"李汉
-明","purpose":"上下班","resource":"精选小程序","sex":"男"},"discountNoList":["5f72ad1ad9b1830006f2db74","5f72ad1ad9b1830006f2db77"],"frameVinCode":"280422006001082","oldDiscountAmount":4000,"orderProductVos":[{"classify":"A5租电","classifyType":0,"code":"10000085030","color":"玛瑙灰","count":1,"mode":"轻骑版","productAttributeVos":[{"attributeId":386,"attributeName":"购买类型","attributeValue":"A5租电","pid":128},{"attributeId":136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":275,"attributeName":"车身颜色","attributeValue":"玛瑙灰","pid":130}],"productId":85317,"productName":"轻骑版 玛瑙灰 A5租电","totalMoney":199900,"unitPrice":199900},{"classify":"","classifyType":1,"color":"","count":1,"mode":""},{"classify":"","classifyType":1,"code":"10000045437","color":"","count":1,"mode":"","productId":84130,"productName":"【A系列】四件套（后靠背+后坐垫+后脚踏+支架）","totalMoney":25700,"unitPrice":25700}],"otherDiscountAmount":0,"payChannel":1,"payMode":1,"phone":"18823292477","productNum":2,"receiveSingleId":16531,"receiveSingleName":"梁
-炜健","totalMoney":221600}
+- [ ] 绑定车辆要把信息同步给驿站小程序
+  - t_vehicle 保存车辆信息
+  - t_merchants_vehicle  车辆与商户的关系
+  - t_bind_vehicle  用户绑车记录
+    - 字段
+      - 合格证
+      - 租赁时间
+      - 租期截至时间
+      - 车架号
+      - 姓名
+      - 电话
+      - 电池SN
 
-1601351397245,
+- [ ] 车辆监控
+  - 车辆状态
+  - 电池电量
+  - 位置信息
+  - 行驶里程
 
-秘钥:5gaz7stm4s8u58b4k7zmaypzcmqfi65n,
-
-加密后信息:96B0DBC34E75BBD60EF8C6B74EC514A7,
-
-qureyStr:,
-
-postStr:{"batteryCode":"1145203700030","customerVo":{"age":"22~30岁","choose":"其他","name":"李汉明","purpose":"上下班","resource":"精选小
-程序","sex":"男"},"discountNoList":["5f72ad1ad9b1830006f2db74","5f72ad1ad9b1830006f2db77"],"frameVinCode":"280422006001082","oldDiscountAmount":4000,"orderProductVos":[{"classify":"A5租电","classifyType":0,"code":"10000085030","color":"玛瑙灰","count":1,"mode":"轻骑版",
-"productAttributeVos":[{"attributeId":386,"attributeName":"购买类型","attributeValue":"A5租电","pid":128},{"attributeId":136,"attributeName":"规格类型","attributeValue":"轻骑版","pid":129},{"attributeId":275,"attributeName":"车身颜色","attributeValue":"玛瑙灰","pid":130
-}],"productId":85317,"productName":"轻骑版 玛瑙灰 A5租电","totalMoney":199900,"unitPrice":199900},{"classify":"","classifyType":1,"color":"","count":1,"mode":""},{"classify":"","classifyType":1,"code":"10000045437","color":"","count":1,"mode":"","productId":84130,"produ
-ctName":"【A系列】四件套（后靠背+后坐垫+后脚踏+支架）","totalMoney":25700,"unitPrice":25700}],"otherDiscountAmount":0,"payChannel":1,"payMode":1,"phone":"18823292477","productNum":2,"receiveSingleId":16531,"receiveSingleName":"梁炜健","totalMoney":221600},
-
-timestamp:1601351397245]
+- [ ] 行驶里程7\30统计
+- [ ] 总里程统计
+- [x] 告警信息  mongodb  me_alarm_notice
+- [ ] 实时坐标转为地址  
 
 
 
-- 省 ： 山东
-- 市 ：
+
+
+t_vehicle:
+
+vehicle_code
+
+vehicle_status
+
+t_bind_vehicle:
+
+vehicle_code
+
+battery_sn
+
+user_name
+
+phone
+
+user_id
+
+bind_time
+
+unbind_time
+
+bind_status
+
+del_flag
+
+qualification
+
+
+
+修改订单状态
+
+?发放佣金
+
+修改小猪cms
+
+核销优惠券
+
+修改客户信息
+
+同步leads信息
+
+创建租电白名单
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE `mambike_dealer`.`t_door_site` 
+ADD COLUMN `service_workday_time` varchar(15) NOT NULL DEFAULT '' COMMENT '站点工作日营业时间' AFTER `contact_name`,
+ADD COLUMN `service_holiday_time` varchar(15) NOT NULL DEFAULT '' COMMENT '站点非工作日营业时间' AFTER `service_workday_time`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+| 表名                            | 注释                               |
+| ------------------------------- | ---------------------------------- |
+| t_bind_user_car                 | 用户绑车信息表                     |
+| t_customer                      | 客户管理信息                       |
+| t_customer_contact_record       | 客户联系记录                       |
+| t_customer_set                  | 门店客户分配规则                   |
+| t_d2d_door_electronic_fence     | 上门服务电子围栏表                 |
+| t_d2d_door_setting              | 上门时间配置表                     |
+| t_d2d_door_time                 | 上门时间段表                       |
+| t_d2d_order                     | 上门服务信息                       |
+| t_d2d_order_forward             | 转派记录表                         |
+| t_d2d_order_material            | 上门服务收费信息                   |
+| t_d2d_repair_order              | 上门维保订单信息                   |
+| t_d2d_repair_order_material     | 上门维保耗材收费信息               |
+| t_data_extract_plan             | 提货计划表                         |
+| t_dealer                        | 一网二网信息表                     |
+| t_dealer_account                | 掌柜端统一账号表                   |
+| t_dealer_battery_bl             |                                    |
+| t_dealer_battery_bl_op_record   |                                    |
+| t_dealer_image_info             | 商户图片信息表                     |
+| t_dealer_login_record           | 掌柜端账号登录记录表               |
+| t_ding_after_sale_parts_record  | 钉钉电动售后退回部件跟踪记录       |
+| t_ding_electricity_sales_record | 钉钉电动销售记录                   |
+| t_discount                      | 优惠券核销记录表                   |
+| t_door                          | 门店信息                           |
+| t_door_read_protocol            | 租电补贴协议通知读取               |
+| t_door_site                     | 门店设备站点                       |
+| t_door_site_image               | 换电站图片                         |
+| t_door_update                   | 门店修改信息                       |
+| t_door_whitelist                | 门店白名单                         |
+| t_electric_exchange_battery     | 换电流通电池表                     |
+| t_electric_exchange_blank_list  | 换电黑名单列表                     |
+| t_electric_exchange_record      | 门店设备换电记录表                 |
+| t_equipment_bind_record         | 门店设备绑定记录表                 |
+| t_equipment_store               | 门店设备关联表                     |
+| t_erp_chejia                    | ERP车架数据表                      |
+| t_erp_customer                  | e10视图客户表                      |
+| t_erp_item                      | e10物料                            |
+| t_erp_xsck                      | e10出库信息                        |
+| t_exchange_electric_setting     | 换电套餐配置表                     |
+| t_favour_option                 | 产品偏好表                         |
+| t_favour_option_platform        | 产品偏好表                         |
+| t_favour_option_sub             | 产品偏好子表                       |
+| t_file_md5                      | 上传文件MD5                        |
+| t_firstyear_flowpackage_reset   | 首年免费流量包重                   |
+| t_flow_pack                     | 车型流量包表                       |
+| t_fresh_deposit_expand          | 新品预定定金膨胀记录表             |
+| t_fresh_deposit_expand_rule     | 新品预定助力金规则表               |
+| t_functive                      | 功能项表                           |
+| t_functive_grade                | 功能项版本对应关系表               |
+| t_functive_plan                 | 功能项方案表                       |
+| t_functive_use                  | 车型可用功能表                     |
+| t_goods_sku                     | 商品SKU                            |
+| t_goods_sku_pig                 | 商品SKU与小猪商品对应表            |
+| t_in_goods                      | 入库信息                           |
+| t_in_products                   | 入库产品信息                       |
+| t_installment_set               | 电池分期套餐                       |
+| t_installment_whitelist         | 分期购白名单                       |
+| t_inventory_entering            | 门店盘点，车架号、电池SN号录入接口 |
+| t_inventory_entering_batch      | 录入车架批次                       |
+
+
+
+
+
+设备绑定、解绑保存
+
+提供设备解绑处理接口
+
+
+
+
+
+
+
+
+
+魔岩:
+
+![image-20210507110427676](source/Untitled.assets/image-20210507110427676.png)
+
+- 消息提醒是否已取消;是否影响掌柜
+
+- 退租是否影响掌柜
+
+  ![image-20210507110820794](source/Untitled.assets/image-20210507110820794.png)
+
+**车辆监控**
+
+​	**C端需要提供接口:**
+
+- 车辆状态统计(传车架号列表)
+
+- 车辆列表剩余电量、当前位置、车辆状态(传车架号列表)
+
+- 车辆详情的剩余电量、当前位置、车辆状态、总里程(传单个车架号)
+
+​	**数据组接口**
+
+- 查询截至昨日的总里程
+- 7日/30日各天的里程
+
+**车辆告警**
+
+- Kafka接收遥测上报数据保存mongo
+
+
+
+进销存调拨
+
+- [ ] 获取门店列表
+
+- [ ] 商品调拨
+- [x] 调拨记录查询
+
+
+
